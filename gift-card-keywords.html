@@ -6,10 +6,18 @@
 <title>Amazon Gift Card Search Phrase Reference</title>
 <meta name="description" content="Organized reference of Amazon gift card, reward, offer, earning, qualifying and online search phrases.">
 <meta name="robots" content="index,follow">
-<style>body{font-family:Arial,sans-serif;max-width:1000px;margin:auto;padding:30px;line-height:1.6;color:#222}h1{text-align:center}p{color:#666}.group{margin:30px 0}.group h2{border-bottom:1px solid #ddd;padding-bottom:8px}ul{columns:2;padding-left:25px}li{margin:3px 0}@media(max-width:700px){ul{columns:1}}</style>
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;max-width:1000px;margin:auto;padding:20px;line-height:1.6;color:#222;background:#f7f9fc}
+h1{text-align:center}
+p{color:#666}.group{margin:30px 0;background:#fff;padding:24px;border-radius:16px;border:1px solid #e5e7eb}.group h2{border-bottom:1px solid #ddd;padding-bottom:8px}ul{columns:2;padding-left:25px}li{margin:3px 0}
+.top-cta{margin:0 0 30px}.cta-card{display:flex;align-items:center;gap:15px;padding:16px 20px;border-radius:17px;background:linear-gradient(135deg,#fff4c7,#fff);border:1px solid #e7cf67;box-shadow:0 8px 24px rgba(0,0,0,.08);text-decoration:none;color:#172033;transition:.2s ease}.cta-card:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.12)}.cta-icon{font-size:32px}.cta-content{flex:1;display:flex;flex-direction:column}.cta-content strong{font-size:17px}.cta-content small{color:#667085;margin-top:2px}.cta-arrow{font-size:24px;font-weight:bold}
+@media(max-width:700px){ul{columns:1}.cta-card{padding:14px}.cta-content strong{font-size:15px}.cta-icon{font-size:27px}}
+</style>
 </head>
 <body>
 <main>
+<div class="top-cta"><a href="https://lotit.net/" class="cta-card" aria-label="Visit Lotit.net and get started with the gift card offer"><span class="cta-icon">🎁</span><span class="cta-content"><strong>Ready to Get Your Gift Card?</strong><small>Click here to visit Lotit.net and get started →</small></span><span class="cta-arrow">→</span></a></div>
 <h1>Amazon Gift Card Search Phrase Reference</h1>
 <p>This page contains relevant search phrases covering gift card rewards, offers, earning and qualifying opportunities. Phrases should only be used where they accurately describe the offers available on the site.</p>
 <div id="keywords"></div>
@@ -17,13 +25,9 @@
 <script>
 const amounts=['$10','$25','$50','$100','$200'];
 const intents=['free','rewards','offers','earn','qualify','online','reward','promotion','bonus','eligible'];
-const templates=[
-'{i} {a} amazon gift card','{a} amazon gift card {i}','{i} amazon gift card online','{i} amazon gift card offer','{i} amazon gift card offers','{i} amazon gift card reward','{i} amazon gift card rewards','{i} amazon gift card promotion','{i} amazon gift card bonus','{i} {a} gift card','{a} gift card {i}','{i} {a} gift card online','{i} {a} gift card offer','{i} {a} gift card offers','{i} {a} gift card reward','{i} {a} gift card rewards','{i} {a} gift card promotion','{i} {a} gift card bonus','amazon {a} reward {i}','amazon {a} gift card {i}','amazon gift card {a} {i}','amazon gift card {i} {a}','{i} amazon reward {a}','{i} amazon rewards {a}','{i} gift card reward {a}','{i} gift card rewards {a}','{i} online amazon gift card {a}','{i} online gift card {a}','{i} amazon gift card opportunity {a}','{i} qualifying amazon gift card {a}','{i} qualifying gift card {a}','{i} amazon gift card eligibility {a}','{i} amazon reward offer {a}','{i} gift card reward offer {a}','{i} gift card promotion {a}','{i} amazon gift card deal {a}','{i} gift card deal {a}','{i} earn amazon gift card {a}','{i} get amazon gift card {a}','{i} amazon gift card available {a}'
-];
-const general=[
-'free amazon gift card','amazon gift card free','free amazon gift card online','free gift card online','free gift cards','free gift card offers','free gift card rewards','amazon gift card reward','amazon gift card rewards','gift card offers','amazon reward','gift card promotion','qualifying gift card offer','online gift card reward','earn amazon gift cards','earn gift cards online','gift card rewards online','amazon rewards online','qualifying amazon gift card','amazon gift card offer','amazon gift card offers','amazon reward offer','amazon rewards offer','gift card reward offer','gift card reward offers','online gift card offers','online gift card promotion','gift card earning opportunities','amazon gift card opportunities','amazon shopping rewards'
-];
-const groups={"General":general,"$10":[],"$25":[],"$50":[],"$100":[],"$200":[]};
+const templates=['{i} {a} amazon gift card','{a} amazon gift card {i}','{i} amazon gift card online','{i} amazon gift card offer','{i} amazon gift card offers','{i} amazon gift card reward','{i} amazon gift card rewards','{i} amazon gift card promotion','{i} amazon gift card bonus','{i} {a} gift card','{a} gift card {i}','{i} {a} gift card online','{i} {a} gift card offer','{i} {a} gift card offers','{i} {a} gift card reward','{i} {a} gift card rewards','{i} {a} gift card promotion','{i} {a} gift card bonus','amazon {a} reward {i}','amazon {a} gift card {i}','amazon gift card {a} {i}','amazon gift card {i} {a}','{i} amazon reward {a}','{i} amazon rewards {a}','{i} gift card reward {a}','{i} gift card rewards {a}','{i} online amazon gift card {a}','{i} online gift card {a}','{i} amazon gift card opportunity {a}','{i} qualifying amazon gift card {a}','{i} qualifying gift card {a}','{i} amazon gift card eligibility {a}','{i} amazon reward offer {a}','{i} gift card reward offer {a}','{i} gift card promotion {a}','{i} amazon gift card deal {a}','{i} gift card deal {a}','{i} earn amazon gift card {a}','{i} get amazon gift card {a}','{i} amazon gift card available {a}'];
+const general=['free amazon gift card','amazon gift card free','free amazon gift card online','free gift card online','free gift cards','free gift card offers','free gift card rewards','amazon gift card reward','amazon gift card rewards','gift card offers','amazon reward','gift card promotion','qualifying gift card offer','online gift card reward','earn amazon gift cards','earn gift cards online','gift card rewards online','amazon rewards online','qualifying amazon gift card','amazon gift card offer','amazon gift card offers','amazon reward offer','amazon rewards offer','gift card reward offer','gift card reward offers','online gift card offers','online gift card promotion','gift card earning opportunities','amazon gift card opportunities','amazon shopping rewards'];
+const groups={'General':general,'$10':[],'$25':[],'$50':[],'$100':[],'$200':[]};
 amounts.forEach(a=>{groups[a]=[];intents.forEach(i=>templates.forEach(t=>groups[a].push(t.replaceAll('{a}',a).replaceAll('{i}',i))))});
 const root=document.getElementById('keywords');
 Object.entries(groups).forEach(([name,list])=>{const s=document.createElement('section');s.className='group';const h=document.createElement('h2');h.textContent=name;s.appendChild(h);const u=document.createElement('ul');[...new Set(list)].forEach(k=>{const li=document.createElement('li');li.textContent=k;u.appendChild(li)});s.appendChild(u);root.appendChild(s)});
